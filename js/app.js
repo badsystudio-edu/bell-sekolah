@@ -274,12 +274,3 @@ document.addEventListener('input', e => {
   S.f[k] = e.target.value; $('#jb').innerHTML = jrows();
 });
 
-// ==================== INIT ====================
-(async function init() {
-  $('#view').innerHTML = '<div class="card">Memuat data…</div>';
-  try { await load(); } catch (e) { $('#view').innerHTML = `<div class="card">Gagal terhubung ke server: ${esc(e.message)}</div>`; return; }
-  setInterval(tick, 250);
-  setInterval(() => load(true).catch(() => { }), 60000);                                   // perbarui jadwal tiap menit
-  setInterval(() => isPlayer() && post('ping', { playerId: S.dev }).catch(() => { }), 30000); // heartbeat pemutar
-  document.addEventListener('visibilitychange', async () => { if (S.on && !document.hidden && navigator.wakeLock) try { S.wl = await navigator.wakeLock.request('screen'); } catch (e) { } });
-})();

@@ -43,3 +43,6 @@ td{padding:10px;border-bottom:1px solid var(--bd)}tr:hover td{background:#F8FAFC
 #loading{position:fixed;top:70px;right:20px;background:var(--ink);color:#fff;padding:8px 16px;border-radius:99px;z-index:30;font-weight:600}
 @media(max-width:860px){body{flex-direction:column}#side{width:100%;height:auto;position:static;padding:8px}.brand{display:none}
 #nav{display:flex;overflow-x:auto;gap:4px}#nav a{white-space:nowrap;margin:0}.grid{grid-template-columns:1fr}#view{padding:14px}#top{padding:10px 14px}.hero .big{font-size:40px}}
+
+#login{position:fixed;inset:0;background:var(--bg);z-index:50;overflow:auto;padding:16px}
+.banner.go{background:#DBEAFE;border-color:#93C5FD;color:#1E3A8A;cursor:pointer}
